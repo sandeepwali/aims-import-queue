@@ -1,0 +1,25 @@
+server:
+  port: 9199
+spring:
+  cloud:
+    stream:
+      function.definition: aggregate;testSource;testSink
+      bindings:
+        aggregate-out-0:
+          destination: transformed
+        testSink-in-0:
+          destination: transformed
+        aggregate-in-0:
+          destination: testtock
+        testSource-out-0:
+          destination: testtock
+
+solace:
+  java:
+    host: 20.79.227.77
+    msgVpn: lidl-staging
+    clientUsername: lidl-staging
+    clientPassword: jdn41!SDF5
+    connectRetries: -1
+    reconnectRetries: -1
+

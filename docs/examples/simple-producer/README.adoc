@@ -1,0 +1,6 @@
+# Simple Producer
+
+
+## References
+
+* https://tutorials.solace.dev/spring/spring-cloud-stream/
