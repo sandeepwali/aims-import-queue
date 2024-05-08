@@ -1,0 +1,6 @@
+[submodule "docs/scripts/aims-import-toolbox"]
+	path = docs/scripts/aims-import-toolbox
+	url = git@gitlab.com:solum-esl/customers/schwarz-it/lidl/python/aims-import-toolbox.git
+[submodule "docs/scripts/aims-stress-test"]
+	path = docs/scripts/aims-stress-test
+	url = git@gitlab.com:solum-esl/solum-esl-aims/solum-esl-aims-scripts/aims-stress-test.git

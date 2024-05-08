@@ -1,0 +1,17 @@
+image: harbor.solumesl.com/docker/docker:20.10.17-git-r0
+
+variables:
+  DOCKER_HOST: tcp://docker-dind:2375
+
+stages:
+  - build
+
+before_script:
+    - buildah info
+
+build-job:
+  stage: build
+  script:
+    - .dockerbuild/build.sh
+  only:
+    - /^(\d+\.\d+\.\d+-(SNAPSHOT|RELEASE))$/  # Build only when this regular expression matches the desired tag format.
