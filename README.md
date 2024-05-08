@@ -76,7 +76,7 @@ docker run -ti harbor.solumesl.com/schwarz-it/lidl/aims-import-queue:0.0.6-SNAPS
 | [LOGGING_LEVEL_COM_SOLUM](#logging_level_com_solum) |  INFO |
 | [SOLACE_HOST](#solace_host) |  <SOLACE_HOST> |
 | [SOLACE_VPN](#solace_vpn) |  <SOLACE_VPN> |
-| [SOLACE_USERNAME](#solace_username) |  <SOLACE_USERNAME> |
+| [SOLACE_USERNAME] (#solace_username) |  <SOLACE_USERNAME> |
 | [SOLACE_PASSWORD](#solace_password) |  <SOLACE_PASSWORD> |
 | [SOLACE_QUEUE](#solace_queue) |<SOLACE_QUEUE> |
 | [SOLACE_ERROR_TOPIC](#solace_error_topic) |  <SOLACE_ERROR_TOPIC> |
@@ -91,7 +91,7 @@ docker run -ti harbor.solumesl.com/schwarz-it/lidl/aims-import-queue:0.0.6-SNAPS
 | [AIMS_API_KEY](#aims_api_key) |   |
 | [AIMS_PROPERTIES_BATCH_SIZE](#aims_properties_batch_size) |  1000 |
 | [AIMS_PORTAL_QUEUE_ENABLED](#aims_portal_queue_enabled) |  true |
-| [CUSTOMER_FILE_NUMBER_OF_ROWS_PER_ONCE](#customer_file_number_of_rows_per_once) |  1000 |
+| [CUSTOMER_FILE_NUMBER_OF_ROWS_PER_ON] (#customer_file_number_of_rows_per_once) |  1000 |
 | [RABBITMQ_ADDRESSES](#rabbitmq_addresses) | <RABBITMQ_ADDRESSES>  |
 | [RABBITMQ_SSL_ENABLED](#rabbitmq_ssl_enabled) | <RABBITMQ_SSL_ENABLE> |
 | [RABBITMQ_SSL_VERIFY_HOSTNAME](#rabbitmq_ssl_verify_hostname) | false |
