@@ -281,5 +281,7 @@ Enable mandatory messages.
 
 ### SOLACE DETAILS
 https://20.113.13.192:1943/#/
+
 lidl-demo
+
 jdn41!SDF5
