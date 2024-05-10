@@ -11,7 +11,7 @@
 	</parent>
 	<groupId>com.solum</groupId>
 	<artifactId>aims-import-queue</artifactId>
-	<version>0.0.22-SNAPSHOT</version>
+	<version>0.0.23-SNAPSHOT</version>
 	<name>aims-import-queue</name>
 	<description>aims-import-queue</description>
 	<properties>
@@ -27,40 +27,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
-			<exclusions>
-				<exclusion>
-            		<groupId>org.apache.tomcat.embed</groupId>
-            		<artifactId>tomcat-embed-core</artifactId>
-        		</exclusion>
-        		<exclusion>
-            		<groupId>org.springframework</groupId>
-            		<artifactId>spring-expression</artifactId>
-        		</exclusion>
-        		<exclusion>
-            		<groupId>org.springframework</groupId>
-            		<artifactId>spring-webmvc</artifactId>
-        		</exclusion>
-			</exclusions>
 		</dependency>
-		
-		<dependency>
-    		<groupId>org.apache.tomcat.embed</groupId>
-    		<artifactId>tomcat-embed-core</artifactId>
-    		<version>11.0.0-M19</version> <!-- Or any version that meets the requirement -->
-		</dependency>
-		
-		<dependency>
-    		<groupId>org.springframework</groupId>
-    		<artifactId>spring-expression</artifactId>
-    		<version>6.1.6</version>
-		</dependency>
-		
-		<dependency>
-    		<groupId>org.springframework</groupId>
-    		<artifactId>spring-webmvc</artifactId>
-    		<version>6.1.6</version>
-		</dependency>
-		
 		<!-- <dependency> <groupId>org.springframework.boot</groupId> <artifactId>spring-boot-starter-webflux</artifactId> 
 			</dependency> -->
 		<dependency>
@@ -71,27 +38,7 @@
 					<groupId>org.apache.logging.log4j</groupId>
 					<artifactId>log4j-to-slf4j</artifactId>
 				</exclusion>
-				<exclusion>
-					<groupId>org.springframework.boot</groupId>
-					<artifactId>spring-boot-actuator-autoconfigure</artifactId>
-				</exclusion>
-				<exclusion>
-					<groupId>org.springframework.boot</groupId>
-					<artifactId>spring-boot-autoconfigure</artifactId>
-				</exclusion>
 			</exclusions>
-		</dependency>
-		
-		<dependency>
-    		<groupId>org.springframework.boot</groupId>
-    		<artifactId>spring-boot-actuator-autoconfigure</artifactId>
-    		<version>3.2.5</version> <!-- Or any version that meets the requirement -->
-		</dependency>
-		
-		<dependency>
-    		<groupId>org.springframework.boot</groupId>
-    		<artifactId>spring-boot-autoconfigure</artifactId>
-    		<version>3.2.5</version>
 		</dependency>
 
 		<!-- spring-cloud -->
@@ -112,17 +59,7 @@
 					<groupId>org.bouncycastle</groupId>
 					<artifactId>bcprov-jdk15on</artifactId>
 				</exclusion>
-				<exclusion>
-            		<groupId>commons-fileupload</groupId>
-            		<artifactId>commons-fileupload</artifactId>
-        		</exclusion>
 			</exclusions>
-		</dependency>
-		
-		<dependency>
-		    <groupId>commons-fileupload</groupId>
-		    <artifactId>commons-fileupload</artifactId>
-		    <version>1.5</version> <!-- Or any version higher than 1.5 -->
 		</dependency>
 
 		<!-- solace -->
@@ -158,18 +95,7 @@
 		<dependency>
 			<groupId>org.springframework.amqp</groupId>
 			<artifactId>spring-rabbit</artifactId>
-			<exclusions>
-				<exclusion>
-					<groupId>org.springframework.amqp</groupId>
-					<artifactId>spring-amqp</artifactId>
-				</exclusion>
-			</exclusions>
-		</dependency>
-		
-		<dependency>
-    		<groupId>org.springframework.amqp</groupId>
-    		<artifactId>spring-amqp</artifactId>
-    		<version>3.1.4</version>
+			<version>3.0.8</version>
 		</dependency>
 
 		<!-- optional -->
@@ -186,7 +112,6 @@
 		<dependency>
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
-			<version>42.7.3</version>
 			<scope>runtime</scope>
 		</dependency>
 		<dependency>
@@ -279,20 +204,6 @@
 			<plugin>
 				<groupId>pl.project13.maven</groupId>
 				<artifactId>git-commit-id-plugin</artifactId>
-			</plugin>
-			<plugin>
-			    <groupId>org.apache.maven.plugins</groupId>
-			    <artifactId>maven-dependency-plugin</artifactId>
-			    <version>3.2.0</version> <!-- Or the latest version -->
-			    <executions>
-			        <execution>
-			            <id>analyze-deps</id>
-			            <phase>validate</phase>
-			            <goals>
-			                <goal>analyze-only</goal>
-			            </goals>
-			        </execution>
-			    </executions>
 			</plugin>
 		</plugins>
 	</build>
