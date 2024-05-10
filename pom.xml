@@ -7,7 +7,7 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.7.2</version>
-		<relativePath /> <!-- lookup parent from repository -->
+		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.solum</groupId>
 	<artifactId>aims-import-queue</artifactId>
@@ -95,7 +95,7 @@
 		<dependency>
 			<groupId>org.springframework.amqp</groupId>
 			<artifactId>spring-rabbit</artifactId>
-			<version>3.0.8</version>
+			<version>3.0.10</version>
 		</dependency>
 
 		<!-- optional -->
