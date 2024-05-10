@@ -7,7 +7,7 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.7.2</version>
-		<relativePath /> <!-- lookup parent from repository -->
+		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.solum</groupId>
 	<artifactId>aims-import-queue</artifactId>
@@ -140,7 +140,7 @@
 		<dependency>
 			<groupId>io.micrometer</groupId>
 			<artifactId>micrometer-registry-prometheus</artifactId>
-			<version>1.9.3</version>
+			<version>1.12.5</version>
 		</dependency>
 		<dependency>
 			<groupId>org.yaml</groupId>
