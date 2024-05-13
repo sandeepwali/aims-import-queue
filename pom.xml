@@ -69,6 +69,7 @@
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-openfeign</artifactId>
+			<version>4.1.1</version>
 			<exclusions>
 				<exclusion>
 					<groupId>commons-io</groupId>
