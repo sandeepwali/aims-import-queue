@@ -83,12 +83,6 @@
 			</exclusions>
 		</dependency>
 		
-		<dependency>
-		    <groupId>commons-fileupload</groupId>
-		    <artifactId>commons-fileupload</artifactId>
-		    <version>1.5</version> <!-- Or any version higher than 1.5 -->
-		</dependency>
-
 		<!-- solace -->
 		<dependency>
 			<groupId>com.solace.spring.boot</groupId>
@@ -261,5 +255,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
 </project>
