@@ -6,52 +6,32 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.7.2</version>
-		<relativePath /> <!-- lookup parent from repository -->
+		<version>2.7.18</version>
+		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.solum</groupId>
 	<artifactId>aims-import-queue</artifactId>
-	<version>0.0.22-SNAPSHOT</version>
+	<version>0.0.23-SNAPSHOT</version>
 	<name>aims-import-queue</name>
 	<description>aims-import-queue</description>
 	<properties>
 		<java.version>17</java.version>
-		<solace-spring-cloud-bom.version>2.3.2</solace-spring-cloud-bom.version> <!-- https://github.com/SolaceProducts/solace-spring-cloud/releases -->
-		<spring-cloud-dependencies.version>2021.0.3</spring-cloud-dependencies.version> <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-dependencies -->
+		<solace-spring-cloud-bom.version>2.4.0</solace-spring-cloud-bom.version> <!-- https://github.com/SolaceProducts/solace-spring-cloud/releases -->
+		<spring-cloud-dependencies.version>2021.0.9</spring-cloud-dependencies.version> <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-dependencies -->
+
 	</properties>
-	
 	<dependencies>
+
 		<!-- spring-boot -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
-			<version>3.2.5</version>
-			<exclusions>
-				<exclusion>
-            		<groupId>org.apache.tomcat.embed</groupId>
-            		<artifactId>tomcat-embed-core</artifactId>
-        		</exclusion>
-        		<exclusion>
-            		<groupId>org.springframework</groupId>
-            		<artifactId>spring-expression</artifactId>
-        		</exclusion>
-        		<exclusion>
-            		<groupId>org.springframework</groupId>
-            		<artifactId>spring-webmvc</artifactId>
-        		</exclusion>
-				<exclusion>
-            		<groupId>org.springframework</groupId>
-            		<artifactId>spring-web</artifactId>
-        		</exclusion>
-			</exclusions>
 		</dependency>
-
 		<!-- <dependency> <groupId>org.springframework.boot</groupId> <artifactId>spring-boot-starter-webflux</artifactId> 
 			</dependency> -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
-			<version>3.2.5</version>
 			<exclusions>
 				<exclusion>
 					<groupId>org.apache.logging.log4j</groupId>
@@ -69,7 +49,6 @@
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-openfeign</artifactId>
-			<version>4.1.1</version>
 			<exclusions>
 				<exclusion>
 					<groupId>commons-io</groupId>
@@ -79,13 +58,9 @@
 					<groupId>org.bouncycastle</groupId>
 					<artifactId>bcprov-jdk15on</artifactId>
 				</exclusion>
-				<exclusion>
-            		<groupId>commons-fileupload</groupId>
-            		<artifactId>commons-fileupload</artifactId>
-        		</exclusion>
 			</exclusions>
 		</dependency>
-		
+
 		<!-- solace -->
 		<dependency>
 			<groupId>com.solace.spring.boot</groupId>
@@ -95,6 +70,7 @@
 		<dependency>
 			<groupId>com.solace.spring.cloud</groupId>
 			<artifactId>spring-cloud-starter-stream-solace</artifactId>
+			<version>3.5.0</version>
 		</dependency>
 
 		<!-- micrometer -->
@@ -119,18 +95,7 @@
 		<dependency>
 			<groupId>org.springframework.amqp</groupId>
 			<artifactId>spring-rabbit</artifactId>
-			<exclusions>
-				<exclusion>
-					<groupId>org.springframework.amqp</groupId>
-					<artifactId>spring-amqp</artifactId>
-				</exclusion>
-			</exclusions>
-		</dependency>
-		
-		<dependency>
-    		<groupId>org.springframework.amqp</groupId>
-    		<artifactId>spring-amqp</artifactId>
-    		<version>3.1.4</version>
+			<version>3.0.8</version>
 		</dependency>
 
 		<!-- optional -->
@@ -147,7 +112,6 @@
 		<dependency>
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
-			<version>42.7.3</version>
 			<scope>runtime</scope>
 		</dependency>
 		<dependency>
@@ -180,8 +144,8 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
+
 	</dependencies>
-	
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
@@ -216,7 +180,6 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
-	
 	<build>
 		<plugins>
 			<plugin>
@@ -241,20 +204,6 @@
 			<plugin>
 				<groupId>pl.project13.maven</groupId>
 				<artifactId>git-commit-id-plugin</artifactId>
-			</plugin>
-			<plugin>
-			    <groupId>org.apache.maven.plugins</groupId>
-			    <artifactId>maven-dependency-plugin</artifactId>
-			    <version>3.2.0</version> <!-- Or the latest version -->
-			    <executions>
-			        <execution>
-			            <id>analyze-deps</id>
-			            <phase>validate</phase>
-			            <goals>
-			                <goal>analyze-only</goal>
-			            </goals>
-			        </execution>
-			    </executions>
 			</plugin>
 		</plugins>
 	</build>
